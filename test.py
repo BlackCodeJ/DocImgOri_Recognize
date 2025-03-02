@@ -7,7 +7,8 @@ import numpy as np
 
 class Console:
     def __init__(self):
-        self.predict_model = "./output/best_model/inference"
+        self.predict_model = "./model/inference"
+        # 要重写！！！
         self.input_dir = "./dataset/test/images"
 
     def predict(self, confidence):
