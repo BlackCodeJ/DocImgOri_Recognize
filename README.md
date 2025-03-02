@@ -1,4 +1,5 @@
-"# DocImgOri_Recognize_model"
+"# DocImgOri_Recognize_model"  
+
 0. 本项目在通用图像方向分类模型上对文档图像方向分类效果进行增强，本模型在自定义数据集上测试准确率为97.5%，若增加置信度考量准确率可以高达98.96%
 
 1. 环境搭建：
@@ -31,9 +32,9 @@ paddlex:
    - 解决方法：参照上述第三条
 
 3. 报错：  
-(1)`TypeError: expected str, bytes or os.PathLike object, not NoneType.`  
-(2)`TypeError: paddlex.inference.models.image_classification.ClasPredictor() got multiple values for keyword argument 'model_dir'`
+> `TypeError: expected str, bytes or os.PathLike object, not NoneType.`  
+或`TypeError: paddlex.inference.models.image_classification.ClasPredictor() got multiple values for keyword argument 'model_dir'`
    - 可能原因：代码中'from paddlex import create_model'导入出现问题。应该导入paddlex-release/3.0-rc版本的paddlex包，而实际导入的是前版本的包
    - 解决方法：  
-   (1)在项目根目录下导入最新版paddlex包，包下载地址：https://github.com/PaddlePaddle/PaddleX/tree/release/3.0-rc/paddlex (推荐)  
-   (2)将create_model的参数修改为self.predict_model
+   > 在项目根目录下导入最新版paddlex包，包下载地址：<https://github.com/PaddlePaddle/PaddleX/tree/release/3.0-rc/paddlex>(推荐)  
+   或 将create_model的参数修改为self.predict_model
